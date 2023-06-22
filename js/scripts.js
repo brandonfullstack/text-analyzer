@@ -14,5 +14,12 @@ function wordCounter(text) {
 }
 
 function numberOfOccurrencesInText(word, text) {
-  return 0;
+  const textArray = text.split(" ");
+  let wordCount = 0;
+  textArray.forEach(function(element) {
+    if (element.toLowerCase().includes(word.toLowerCase())) {
+      wordCount++;
+    }
+  });
+  return wordCount;
 }
