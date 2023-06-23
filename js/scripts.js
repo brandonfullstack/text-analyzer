@@ -29,6 +29,26 @@ function numberOfOccurrencesInText(word, text) {
 
 // UI Logic
 
+function boldPassage(word, text) {
+  if ((text.trim().length === 0) || (word.trim().length === 0)) {
+    return null;
+  }
+  const p = document.createElement("p");
+  let textArray = text.split(" ");
+  textArray.forEach(function(element) {
+    if (word === element) {
+      const bold = document.createElement("strong");
+      bold.append(element);
+      p.append(bold);
+    } else {
+      p.append(element);
+    }
+    p.append(" ");
+  });
+  return p;
+}
+
+
 function handleFormSubmission() {
   event.preventDefault();
   const passage = document.getElementById("text-passage").value;
