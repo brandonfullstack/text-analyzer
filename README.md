@@ -111,3 +111,17 @@ const word = "hello";
 const text = "hello there";
 boldPassage(word, text);
 Expected Output: <p><strong>hello</strong> there</p>
+
+Describe: eachWordOccurence()
+
+Test: "It should return 0 for a empty string"
+Code:
+const text = ""
+eachWordOccurrence()
+Expected Output: 0
+
+Test: "it should return the word and 1 if a passage has just one word."
+Code:
+const text = "hello";
+eachWordOccurrence()
+Expected Output: [hello, 1]

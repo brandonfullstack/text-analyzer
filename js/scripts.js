@@ -1,3 +1,9 @@
+// Utility Logic
+
+function isEmpty(testString) {
+  return (testString.trim().length === 0);
+}
+
 // Business Logic
 
 function wordCounter(text) {
@@ -26,6 +32,14 @@ function numberOfOccurrencesInText(word, text) {
   });
   return wordCount;
 }
+
+function eachWordOccurrence(text) {
+  if (isEmpty(text))
+    return 0;
+  }
+  if (text.length === 1) {
+    return `${text}: 1`;
+  }
 
 // UI Logic
 
